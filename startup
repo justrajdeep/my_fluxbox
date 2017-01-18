@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Start desktop pager
+/tool/pandora/bin/fbpager -w &
+
+# If we're a VNC session, start vncconfig so copy/paste works.
+if [ "x$VNCDESKTOP" != "x" ]; then
+   /tool/pandora/bin/vncconfig -nowin 2>&1 > /dev/null &
+fi
+
+# Start an xterm so you have a terminal in case something fails when fluxbox comes up
+/tool/pandora/bin/xterm &
+
+# Run any other startup items here -- be sure to background processes
+# that will block, so that the script can reach the exec all at the bottom.
+
+exec /tool/pandora/.package/fluxbox-1.0.0/bin/fluxbox

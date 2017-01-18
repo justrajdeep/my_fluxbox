@@ -1,0 +1,16 @@
+#!/bin/bash
+
+xmodmap $HOME/.xmodmap
+
+/tool/pandora/bin/bbpager -c $HOME/.fluxbox/bbpager.bb -w &
+/tool/pandora/bin/vncconfig -nowin 2>&1 > /dev/null &
+
+xterm &
+
+/usr/X11R6/bin/xset m 5/2 10
+
+if uname -r | grep -q EL; then
+    exec /tool/pandora/.package/fluxbox-0.9.13-a/bin/fluxbox
+else
+    exec /tool/pandora/bin/fluxbox
+fi
