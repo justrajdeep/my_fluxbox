@@ -14,4 +14,4 @@ fi
 # Run any other startup items here -- be sure to background processes
 # that will block, so that the script can reach the exec all at the bottom.
 
-exec /tool/pandora/.package/fluxbox-1.0.0/bin/fluxbox
+exec /tool/pandora/.package/fluxbox-1.3.7/bin/fluxbox

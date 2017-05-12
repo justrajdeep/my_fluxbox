@@ -24,6 +24,7 @@ OnWindow Mod1 Mouse2 :Lower
 
 # control-click a window's titlebar and drag to attach windows
 OnTitlebar Control Mouse1 :StartTabbing
+OnTab Mouse1 :ActivateTab
 
 # double click on the titlebar to shade
 OnTitlebar Double Mouse1 :Shade

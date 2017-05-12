@@ -18,6 +18,7 @@
 [encoding] {UTF-8}
       [exec] (konsole) {konsole}
       [exec] (xterm) {xterm}
+      [exec] (terminator) {terminator}
       [exec] (konqueror) {kfmclient openProfile webbrowsing}
 [submenu] (Terminals)
       [exec]   (xterm) {xterm}
